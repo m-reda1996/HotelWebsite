@@ -17,7 +17,7 @@ export function CheckOut() {
             </div>
         </div>
       <DatePicker
-        className=" w-full h-[70px] pl-4"
+        className=" w-full h-[70px] px-8"
         selected={endDate}
         placeholderText="chick in "
         onChange={(date) => setEndDate(date)}

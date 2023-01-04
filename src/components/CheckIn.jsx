@@ -14,7 +14,7 @@ export function CheckIn() {
             </div>
         </div>
       <DatePicker
-        className=" w-full h-[70px] pl-4"
+        className=" w-full h-[70px] px-8"
         selected={startDate}
         placeholderText="chick in "
         onChange={(date) => setStartDate(date)}
