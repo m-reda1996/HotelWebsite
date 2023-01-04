@@ -33,7 +33,7 @@ export function KidsDropdown() {
           return (
             <Menu.Item
               as="li"
-              className="border-b last-of-type:border-b-0 h-12 hover:bg-yellow-700 hover:text-white w-full justify-center items-center text-center cursor-pointer"
+              className="border-b last-of-type:border-b-0 h-12 hover:bg-[#a37b49] hover:text-white w-full justify-center items-center text-center cursor-pointer"
               key={index}
             >
               {li.name}
