@@ -46,8 +46,13 @@ export const Room = ({ room }) => {
         <p>{description.slice(0, 56)} </p>
       </div>
       <div className=" mt-7 mx-auto ">
-        <Link to={`/room/${id}`} className=" text-center block text-sm font-semibold py-3 px-4  max-w-[220px] mx-auto hover:text-black hover:bg-[#f3d4ad] text-white bg-[#a37b49]">
-          book now from ${price}           
+        <Link
+          to={`/room/${id}`}
+          className=" text-center mb-6 block text-sm font-semibold 
+        py-3 px-4  max-w-[220px] mx-auto hover:text-black 
+        hover:bg-[#f3d4ad] text-white bg-[#a37b49]"
+        >
+          book now from ${price}
         </Link>
       </div>
     </div>

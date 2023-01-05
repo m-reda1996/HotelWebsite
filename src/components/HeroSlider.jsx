@@ -27,9 +27,10 @@ const slides = [
 
 export function HeroSlider() {
   return (
-    <Swiper effect="fade" modules={[EffectFade,Autoplay]} loop = {true} autoplay={{
+    <Swiper effect="fade" modules={[EffectFade,Autoplay]}  loop = {true} autoplay={{
         delay : 3000,
-        disableOnInteraction : false
+        disableOnInteraction : false,
+
     }} className=" h-[600px] lg:h-[860px]">
       {slides.map((slides, el) => {
         const { title, bg, btnText } = slides;
@@ -46,7 +47,7 @@ export function HeroSlider() {
               <h1 className="text-[32px] uppercase tracking-[3px] max-w-[920px] lg:text-[68px] leading-tight mb-6">
                 {title}
               </h1>
-              <button className=" h-[55px]  text-xl text-center block font-semibold hover:text-black hover:bg-[#f3d4ad] text-white bg-[#a37b49] w-full lg:min-w-[220px]  lg:mt-0  lg:max-w-[250px] mx-auto ">{btnText}</button>
+              <button className=" hover:text-black hover:bg-[#f3d4ad] text-white bg-[#a37b49] px-16 py-4 min-w-[250px] mx-auto rounded-md">{btnText}</button>
             </div>
             <div className=" absolute top-0 w-full h-full">
               <img src={bg} alt="" className=" object-cover h-full w-full" />
