@@ -10,11 +10,11 @@ const list = [
   { name: "4 Adult" },
 ];
 export function AdultsDropdown() {
-  const setAdults = useContext(RoomContext);
+  const {adults,setAdults} = useContext(RoomContext);
   return (
     <Menu as="div" className=" w-full h-full bg-white relative">
       <Menu.Button className="w-full h-full flex  items-center justify-between px-8">
-        Adults
+        {adults}
         <BsChevronDown />
       </Menu.Button>
       <Menu.Items
@@ -24,6 +24,7 @@ export function AdultsDropdown() {
         {list.map((li, index) => {
           return (
             <Menu.Item
+            onClick={() => setAdults(li.name)}
               as="li"
               // onClick={() => setAdults(li.name)}
               className="border-b last-of-type:border-b-0 

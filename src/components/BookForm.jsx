@@ -2,8 +2,11 @@ import { CheckIn } from "./CheckIn";
 import { CheckOut } from "./CheckOut";
 import { AdultsDropdown } from "./AdultsDropdown";
 import { KidsDropdown } from "./KidsDropdown";
+import { useContext } from "react";
+import { RoomContext } from "../context/RoomContext";
 
 export function BookForm() {
+  const {handleClick} = useContext(RoomContext)
   return (
     <form action="" className=" h-[300px] w-full lg:h-[70px]">
       <div className="flex flex-col w-full h-full lg:flex-row">
@@ -20,7 +23,14 @@ export function BookForm() {
           <KidsDropdown />
         </div>
         <div>
-          <button className="flex-1 h-[55px] lg:h-[70px] text-xl text-center block font-semibold hover:text-black hover:bg-[#f3d4ad] text-white bg-[#a37b49] w-full lg:min-w-[220px]  lg:mt-0  lg:max-w-[250px] mx-auto ">
+          <button
+          onClick={(e) => handleClick(e)}
+          type="submit"
+            className="flex-1 h-[55px] lg:h-[70px] text-xl 
+          text-center block font-semibold hover:text-black 
+          hover:bg-[#f3d4ad] text-white bg-[#a37b49] w-full 
+          lg:min-w-[220px]  lg:mt-0  lg:max-w-[250px] mx-auto "
+          >
             Check Now
           </button>
         </div>
